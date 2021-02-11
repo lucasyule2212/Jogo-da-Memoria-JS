@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lexend Mega", sans-serif;
+}
+body {
+  background-color: #a8dadc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Cartas */
+
+.card {
+  width: 130px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.card_back,
+.card_front {
+  position: absolute;
+  color: #a8dadc;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 15px black;
+  backface-visibility: hidden;
+}
+.flip {
+  transform: rotateY(180deg);
+}
+.card_front {
+  background-color: #f1faee;
+  transform: rotateY(180deg);
+}
+.card_back {
+  background-color: #457b9d;
+}
+
+/* Tela de fim de jogo */
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#gameOverBox {
+  color: white;
+  display: flex;
+  background-color: #030507d2;
+  width: 600px;
+  height: 200px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#restartGame {
+  color: #457b9d;
+  background-color: #f1faee;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: border-radius 0.5s;
+}
+#restartGame:focus {
+  outline: none;
+}
+#restartGame:hover {
+  color: #a8dadc;
+  background-color: #457b9d;
+  border-radius: 50px;
+}
+
+/* Tabuleiro */
+
+#tabuleiro {
+  display: grid;
+
+  max-width: 800px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
