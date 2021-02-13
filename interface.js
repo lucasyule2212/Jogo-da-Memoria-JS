@@ -73,8 +73,12 @@ function restartGame() {
     turnOffEndScreen();
     restartPairCont();
     restartTabuleiro();
+    restartCards();
+    endGameStatus=false;
     startGame();
 }
-function restartTabuleiro() {
-    tabuleiro=null;
-}
+ function restartTabuleiro() {
+    while (tabuleiro.firstChild) {
+        tabuleiro.removeChild(tabuleiro.lastChild);
+      }
+ }

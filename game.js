@@ -18,6 +18,9 @@ function startGame() {
     shuffleCards(cards);
     showCards(cards);
 }
+function restartCards() {
+    cards=null;
+}
 function createCards(cardTypes) {
 
     let createdCards=[];
